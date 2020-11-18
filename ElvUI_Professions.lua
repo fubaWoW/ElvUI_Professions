@@ -170,7 +170,7 @@ end
 local function OnEnter(self)
   DT:SetupTooltip(self)
 
-  local prof1, prof2, archy, fishing, cooking, firstAid = GetProfessions()
+  local prof1, prof2, archy, fishing, cooking = GetProfessions()
   local professions = {}
 
   if prof1 ~= nil then
@@ -223,18 +223,6 @@ local function OnEnter(self)
       maxRank = maxRank
     }
   end
-
-	--[[
-  if firstAid ~= nil then
-    local name, texture, rank, maxRank, _, _, _, _ = GetProfessionInfo(firstAid)
-    professions[#professions + 1] = {
-      name  = name,
-      texture = ("|T%s:12:12:1:0|t"):format(texture),
-      rank  = rank,
-      maxRank = maxRank
-    }
-  end
-	]]
 
   if #professions == 0 then return end
   --sort(professions, function(a, b) return a["name"] < b["name"] end)
