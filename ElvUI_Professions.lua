@@ -239,8 +239,8 @@ local function OnEnter(self)
     DT.tooltip:AddLine(" ")
     DT.tooltip:AddDoubleLine(KEY_BUTTON1, profname1, 1, 1, 1, 1, 1, 0)
     DT.tooltip:AddDoubleLine(KEY_BUTTON2, profname2, 1, 1, 1, 1, 1, 0)
-    DT.tooltip:AddDoubleLine(L["Alt + "]..KEY_BUTTON1, sCooking, 1, 1, 1, 1, 1, 0)
-		DT.tooltip:AddDoubleLine(L["Alt + "]..KEY_BUTTON2, sArchaeology, 1, 1, 1, 1, 1, 0)
+    DT.tooltip:AddDoubleLine(ALT_KEY.." + "..KEY_BUTTON1, sCooking, 1, 1, 1, 1, 1, 0)
+		DT.tooltip:AddDoubleLine(ALT_KEY.." + "..KEY_BUTTON2, sArchaeology, 1, 1, 1, 1, 1, 0)
 		DT.tooltip:AddDoubleLine(KEY_BUTTON3, _G["SPELLBOOK"], 1, 1, 1, 1, 1, 0)
   end
 
@@ -264,12 +264,12 @@ local function InjectOptions()
     E.Options.args.fuba = {
       type = "group",
       order = -2,
-      name = L["Plugins by |cff0080fffuba|r"],
+      name = "Plugins by |cff0080fffuba|r",
       args = {
         thanks = {
           type = "description",
           order = 1,
-          name = L["ElvUI Plugins by |cff0080fffuba|r\n\n|cffff80ffIf you find any bugs, or have any suggestions for any of my AddOns, please open a ticket at that particular Page on GitHub."],
+          name = "ElvUI Plugins by |cff0080fffuba|r\n\n|cffff80ffIf you find any bugs, or have any suggestions for any of my AddOns, please open a ticket at that particular Page on GitHub.",
         },
       },
     }
@@ -284,7 +284,7 @@ local function InjectOptions()
       prof = {
         type = "select",
         order = 1,
-        name = L["Professions"],
+        name = TRADE_SKILLS,
         desc = L["Select which profession to display."],
         values = function()
           local prof1, prof2, archy, fishing, cooking, firstAid = GetProfessions()
