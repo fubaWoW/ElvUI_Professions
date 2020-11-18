@@ -269,7 +269,7 @@ local function InjectOptions()
         thanks = {
           type = "description",
           order = 1,
-          name = L["ElvUI Plugins by |cff0080fffuba|r\n\n|cffff80ffIf you find any bugs, or have any suggestions for any of my AddOns, please open a ticket at that particular AddOns Page on CurseForge."],
+          name = L["ElvUI Plugins by |cff0080fffuba|r\n\n|cffff80ffIf you find any bugs, or have any suggestions for any of my AddOns, please open a ticket at that particular Page on GitHub."],
         },
       },
     }
