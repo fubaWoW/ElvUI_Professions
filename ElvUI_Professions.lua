@@ -3,7 +3,6 @@
 -- Edited and Fixed by fuba to work with Legion and BfA
 -------------------------------------------------------------------------------
 if not ElvUI then return end
-local isClassicWow = select(4,GetBuildInfo()) < 20000
 local E, _, V, P, G = unpack(ElvUI); --Inport: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local DT = E:GetModule('DataTexts')
 local L = LibStub("AceLocale-3.0"):GetLocale("ElvUI_Professions", false)
@@ -145,16 +144,12 @@ local function Click(self, button)
 				if profindex ~= nil then
 					local name, icon, skillLevel, maxSkillLevel, numAbilities, spelloffset, skillLine, skillModifier, specializationIndex, specializationOffset = GetProfessionInfo(profindex)
 					if name == profname then
-						if isClassicWow then
-							CastSpellByName(profname == sMining and sSmelting or profname)
-						else					
-							if (not TradeSkillUIOpened) then
-								TradeSkillUIOpened = C_TradeSkillUI.OpenTradeSkill(skillLine)
-							else
-								C_TradeSkillUI.CloseTradeSkill()
-								C_Garrison.CloseGarrisonTradeskillNPC()
-								TradeSkillUIOpened = false
-							end
+						if (not TradeSkillUIOpened) then
+							TradeSkillUIOpened = C_TradeSkillUI.OpenTradeSkill(skillLine)
+						else
+							C_TradeSkillUI.CloseTradeSkill()
+							C_Garrison.CloseGarrisonTradeskillNPC()
+							TradeSkillUIOpened = false
 						end
 					end
 				end
