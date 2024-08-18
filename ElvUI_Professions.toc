@@ -1,9 +1,9 @@
-## Interface: 90002
+## Interface: 110002
 ## Author: fuba
 ## Original Author: Lockslap
-## Title: |cff1784d1ElvUI |cffff8000DataText: |cffffffffProfessions|r
-## Version: @project-version@
-## Notes: Simple professions datatext for ElvUI.
+## Title: |cff1784d1ElvUI |cffff8000DataText: |cffffffffProfessionsEx|r
+## Version: 110002.01
+## Notes: Simple professions datatext.
 ## RequiredDeps: ElvUI
 
 Libraries\LibStub\LibStub.lua
