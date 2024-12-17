@@ -1,4 +1,4 @@
-## Interface: 110005
+## Interface: 110007
 ## Author: fuba
 ## Original Author: Lockslap
 ## Title: |cff1784d1ElvUI |cffff8000DataText: |cffffffffProfessionsEx|r
